@@ -85,7 +85,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-image: url(../../images/tick-icon.svg);
+            background-image: url(../images/tick-icon.svg);
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -351,7 +351,7 @@
             position: absolute;
             top: 0;
             right: 0;
-            background-image: url(../../images/soon-icon-1.svg);
+            background-image: url(../images/soon-icon-1.svg);
         }
     }
 }
@@ -424,7 +424,13 @@
 // // //
 
 .transcribed {
+    padding: 80px 0;
+    background: #f5f8ff;
+    border-radius: 20px;
     &__inner {
+        display: flex;
+        gap: 25px;
+        justify-content: space-between;
     }
 }
 
@@ -437,22 +443,252 @@
     align-items: center;
     text-align: center;
     flex-direction: column;
+    margin-bottom: 30px;
     &__titile {
         margin-bottom: 20px;
     }
 
     &__subtitle {
-        
     }
 }
 .transcribed-item {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px 25px;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+
     &__text {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+        color: #2f3a5c;
     }
     &__subtext {
+        font-size: 18px;
+        line-height: 22px;
+        color: #7582a7;
     }
 }
 .transcribed-item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    span {
+        background: #4c60e9;
+        height: 1px;
+        width: 100%;
+    }
+    svg {
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+    }
     &__time {
+        font-size: 18px;
+        line-height: 22px;
+        color: #7582a7;
+    }
+}
+
+// // //
+
+.languages {
+    padding: 80px 0;
+    background: linear-gradient(82.22deg, #4c60e9 22.97%, #7485ff 88.76%);
+    &__title {
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 67px;
+        color: #ffffff;
+        max-width: 700px;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 150px 150px 150px 150px 150px;
+        justify-content: space-between;
+        max-width: 1110px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 50px 0;
+    }
+}
+.languages-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    &__text {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+    }
+
+    &__more {
+        span {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 45px;
+            justify-content: center;
+            background: linear-gradient(82.22deg, #4c60e9 22.97%, #7485ff 88.76%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// // //
+
+.options {
+    padding: 80px 0;
+    &__box {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 655px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 80px;
+    }
+
+    &__box-title {
+        margin-bottom: 20px;
+    }
+
+    &__box-subtitle {
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+.options-item {
+    background: #f5f8ff;
+    border-radius: 16px;
+    padding: 20px 30px 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    max-width: 530px;
+    &__option {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+        color: #2f3a5c;
+
+        position: absolute;
+        top: -22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 123px;
+        height: 45px;
+        background: #ffffff;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.07);
+        border-radius: 60px;
+    }
+
+    svg {
+        margin-bottom: 13px;
+    }
+
+    &__title {
+        align-self: flex-start;
+        margin-bottom: 13px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+        color: #2f3a5c;
+    }
+
+    &__text {
+        align-self: flex-start;
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 22px;
+        color: #7582a7;
+    }
+
+    &__list {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__list-item {
+        padding-left: 35px;
+        position: relative;
+        &::before {
+            content: '';
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            background-image: url(../images/options-tick-icon-red.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__list-text {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height, or 122% */
+
+        display: flex;
+        align-items: center;
+
+        color: #7582a7;
+    }
+}
+.options-item:nth-child(3) {
+    background: linear-gradient(82.22deg, #4C60E9 22.97%, #7485FF 88.76%);
+    .options-item__option {
+        background: #21BA43;
+        color: #FFFFFF;
+    }
+    .options-item__title {
+        color: #FFFFFF;
+    }
+    .options-item__text {
+        color: #FFFFFF;
+    }
+    .options-item__list-item {
+        &::before {
+            background-image: url(../images/options-tick-icon-green.svg);
+        }
+    }
+    .options-item__list-text {
+        color: #fff;
     }
 }
 
