@@ -1,9 +1,13 @@
 $(function () {
+    
+    $('.faq-list__item').on('click', function (event) {
+        if( $(this)[0].classList.contains('faq-list__item--active') ) {
+            $(this).removeClass('faq-list__item--active');
+        } else {
+            $(this).toggleClass('faq-list__item--active');
+        }
+    });
 
-    // $('.header-top-lang').on('click', function (event) {
-    //     $('.header-top-lang-content').toggleClass('header-top-lang-content--active');
-    //     $(this).toggleClass('header-top-lang--active');
-    // });
 
 })
 
@@ -61,8 +65,8 @@ $(function () {
 
 // })
 
-new Swiper('.results-swiper', {
-    slidesPerView: 4,
+new Swiper('.steps-swiper', {
+    slidesPerView: 1,
     enabled: false,
     pagination: {
     
