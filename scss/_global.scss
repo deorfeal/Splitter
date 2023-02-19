@@ -8,6 +8,7 @@ body {
 	// max-width: 1920px;
 	// margin-left: auto;
 	// margin-right: auto;
+	overflow-x: hidden;
 }
 .wrapper {
 	display: flex;
@@ -24,6 +25,15 @@ body {
 	max-width: 1680px;
 	margin: 0 auto;
 	padding: 0 15px;
+	position: relative;
+	z-index: 2;
+}
+
+.big-container {
+	max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
 }
 
 .big-title {
@@ -42,12 +52,13 @@ body {
 
 .title {
 	font-weight: 700;
-	font-size: 48px;
-	line-height: 67px;
 	color: #2f3a5c;
-	padding-bottom: 15px;
+	@include adaptiv-value("padding-bottom", 15, 10, 1);
 	position: relative;
 	display: inline-block;
+
+	@include adaptiv-value("font-size", 48, 32, 1);
+	@include adaptiv-value("line-height", 67, 42, 1);
 	&::before {
 		content: "";
 		position: absolute;
@@ -138,4 +149,7 @@ body {
 	font-size: 18px;
 	line-height: 22px;
 	color: #7582a7;
+
+	@include adaptiv-value("font-size", 18, 14, 1);
+	@include adaptiv-value("line-height", 22, 22, 1);
 }
