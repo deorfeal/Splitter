@@ -63,6 +63,12 @@
             margin-right: auto;
         }
     }
+    .transcribed-item {
+        max-width: unset;
+    }
+    .transcribed-item__subtext {
+        max-width: unset;
+    }
 }
 
 @media (max-width: 1000px) {

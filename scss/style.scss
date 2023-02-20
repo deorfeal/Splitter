@@ -473,6 +473,9 @@
     }
 
     &__row {
+        svg:first-child {
+            display: block;
+        }
         display: flex;
         gap: 10px;
         align-items: center;
@@ -596,6 +599,7 @@
     }
 }
 .transcribed-item {
+    max-width: 530px;
     background: #ffffff;
     border-radius: 20px;
     @include adaptiv-value("padding-top", 30, 20, 1);
@@ -616,6 +620,7 @@
         line-height: 22px;
         color: #7582a7;
         @include adaptiv-value("font-size", 18, 14, 1);
+        max-width: 480px;
     }
 }
 .transcribed-item-row {
@@ -623,6 +628,24 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+    &__audio {
+        width: 45px;
+        height: 45px;
+        position: relative;
+        audio {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        &:hover {
+            svg circle {
+                fill: #7485ff;
+            }
+        }
+    }
     span {
         background: #4c60e9;
         height: 1px;
@@ -643,11 +666,7 @@
             fill: #fff;
             transition: fill 0.3s;
         }
-        &:hover {
-            circle {
-                fill: #7485ff;
-            }
-        }
+      
     }
     &__time {
         font-size: 18px;
@@ -1417,6 +1436,7 @@
     }
 
     &__inner {
+        position: relative;
         max-width: 1095px;
         margin-left: auto;
         margin-right: auto;
@@ -1427,7 +1447,6 @@
         @include adaptiv-value("padding-right", 485, 152, 1);
         @include adaptiv-value("padding-left", 485, 152, 1);
         align-items: center;
-        background: #ffffff;
         border-radius: 16px;
         svg {
             @include adaptiv-value("width", 126, 40, 1);
@@ -1441,6 +1460,18 @@
                     fill: #7485ff; 
                 }
             }
+        }
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 16px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
     }
 }
@@ -1673,9 +1704,6 @@
         line-height: 22px;
         color: #2f3a5c;
     }
-
-    // // //
-
     /* Customize the label (the container) */
     .container {
         margin: unset;
@@ -1748,8 +1776,6 @@
         background-repeat: no-repeat;
         background-size: contain;
     }
-
-    // // //
 }
 
 // // //
